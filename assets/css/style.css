@@ -35,6 +35,12 @@ h4{
     margin-bottom: 3.5em;
     font-size: 0.8em;
 }
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
 
 
 
@@ -45,6 +51,9 @@ h4{
     display: flex; 
     justify-content: space-between;
     padding: 1em;
+}
+.link{
+    display: none;
 }
 h1{
     font-size: 1em;
@@ -84,6 +93,8 @@ h1{
     font-size: 0.8em;
 }
 .social{
+    position: absolute;
+    bottom: 100;
     margin: 4em 2em;
     color: white;
     opacity: 0.5;  
@@ -100,7 +111,6 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
 }
 .aboutCard i{
     font-size: 2.5em;
@@ -318,8 +328,9 @@ h1{
 .progressbar {
     background-color: var(--progress);
     color: white;
-    padding: 0.3em;
     text-align: center;
+    padding: 0.3em;
+    height: 1.5em;
 }
 .progressbar[aria-label="downloading"] {
     background-color: var(--progress);
@@ -329,15 +340,12 @@ h1{
  }
 .photography{
      width: 90%;
-     height: 1.5em;
  }
 .web{
      width: 85%;
-     height: 1.5em;
  }
 .photoshop{
      width: 75%;
-     height: 1.5em;
  }
 .container p{
      letter-spacing: 0.5em;
@@ -448,8 +456,6 @@ footer button{
 }
 button a{
     color: black;
-    text-decoration: none;
-
 }
 .footerSocial{
     padding: 1em;
@@ -461,4 +467,162 @@ footer p{
     font-size: 0.6em;
 }
 
+/****** responsive desktop ******/
 
+@media screen and (min-width: 576px) {
+
+    /****** header ******/
+
+    /* nav */
+    .link{
+        display: flex;
+    }
+    .link a{
+        display: block;
+        padding: 0 1em;
+        color: black;
+    }
+    #iconBurger{
+        display: none;
+    }
+
+    /* backkground image */
+    #headerImg{
+        height: 80vh;
+    }
+    .social{
+        bottom: 6em;
+    }
+    .txtImg p:first-child{
+        font-size: 6em;
+    padding-top: 1.5em;
+    }
+    .txtImg p:last-child{
+        font-size: 1em
+    }
+    .start p{
+        font-size: 1em;
+    }
+
+    /****** main ******/
+
+    /* section about */
+    #about{
+        width: 100%;
+    }
+    #aboutCard{
+        display: flex;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .aboutCard{
+        margin: 2em 0.5em;
+    }
+    #know{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: #e2dfdf;
+        padding: 8em 2em;
+    }
+
+    /* section team */
+    #team{
+        width: 100%;
+    }
+    #cards{
+        display: inline-flex;
+        /* justify-content: space-between; */
+        padding: 0 1em;
+    }
+    .card{
+        width: 24%;
+        margin: 0 1em;
+    }
+    #infoBar{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* section work */
+    #work{
+        width: 100%;
+    }
+    .carousel-container{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2em ;
+    }
+    .carousel{
+        width: 48%;
+    }
+    .slideshow-container{
+        margin: 1em 0 auto;
+    }
+    #skill{
+        display: flex;
+        justify-content: space-between;
+        background: #e2dfdf;
+        padding: 3em 2em;
+        margin-top: 3em;
+    }
+    .skill{
+        width: 45%;
+        margin: 2em 0;
+    }
+    .progressBar{
+        width: 50%;
+        margin: 2em 0;
+    }
+    .progressbar-wrapper {
+        height: 2.5em;
+        font-size: 15px;
+      }
+    .progressbar{
+        padding: 0.6em;
+        height: 2.5em;
+    }
+    .container p{
+        font-size: 15px;
+    }
+
+    /* section pricing */
+    #pricing{
+        margin-top: 0;
+    }
+    #formule{
+        display: flex;
+        justify-content: space-between;
+        margin: 0em 1.5em;
+    }
+    .formule{
+        width: 32.5%;
+        height: 27.5em;
+        margin: 1em 0.5em;
+    }
+    .formulePro{
+        height: 29.5em;
+        margin-top: 0;
+    }
+    .pro{
+        padding: 1.5em;
+    }
+    .signup{
+        background: #e2dfdf;
+    }
+
+    /* section contact */
+    #contact{
+        width: 100%;
+    }
+    .contact,
+    #map{
+        margin: 0 1em;
+    }
+
+    /****** footer ******/
+
+    .textDeco{
+        display: none;
+    }
+}
