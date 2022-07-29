@@ -1,3 +1,18 @@
+// event sur icon burger
+const showMenu = document.getElementById('iconBurger');
+const linkMenu = document.getElementById('link');
+
+// showMenu.addEventListener('click',()=>{
+//   linkMenu.classList.toggle('hide');
+//   linkMenu.classList.toggle('show');
+// }) 
+showMenu.onclick= function(){
+  linkMenu.classList.toggle('hide');
+  linkMenu.classList.toggle('show');
+}
+
+
+
 // diaporama manuel
 let slideIndex = 1;
 showSlides(slideIndex);
